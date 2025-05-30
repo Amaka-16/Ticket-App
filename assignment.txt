@@ -1,0 +1,42 @@
+read on mvc architecture in node.js
+read on object restructuring in javascript
+go back to the first code on how to route endpoints
+read on classes and inheritors for javascript
+create a new node project and coonect to mongo db, ensure sign up with email phone number, gender (use enum for gender). ensure login with email and password
+read on regular expressions
+gender: {
+    type: string,
+    required: true
+    enum: ["male", "female"]
+}
+
+/*Assignment 1: create a movie route, on the routes folder and routes the endpoint to the controller 
+router should be "create-movie"
+then import the movie routes to the server.js file and use it to call the api for movies 
+api should be "/api/v1/movies"
+
+test the endpoint.
+
+"genre": ["Drama", "Fiction", "Adventure"]
+"cast": ["Lioneil Benson"]
+test the endpoints with postman and make it works, and confirm it displays on the database.*/
+// //The ticket is for the new project
+/*create a ticket # Business logic (e.g., createTicket, getTickets)
+
+create the data model for the ticket
+
+eventTitle: String,
+eventDate: Date 
+venue: String,
+seatNumber: String,
+ticketPrice: Number,
+purchaseNumber: String,
+Status: String, enum: ["booked", "cancelled"]
+
+the route handler for the ticker should "/book-ticket"
+"/api/v1/tickets"
+
+Goodluck
+*/
+
+make apis (local and international flights) do research for flights and trains.

@@ -1,0 +1,70 @@
+const jwt = require('jsonwebtoken');
+const User = require('../models/user.models');
+
+// generate JWT token 
+const generateToken = (user, secret, expiresIn) => {
+    return jwt.sign(
+        {email: user.email, userId: user._id},
+        secret,
+        {expiresIn}
+    )
+}
+
+
+
+exports.signup = async (req, res, next) => {
+    const {
+        fullName,
+        email,
+        phoneNumber,
+        gender,
+        password,
+        passwordConfirm
+    } = req.body; //object destructuring
+
+    // check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+        return next (new Error('Email is already in use', 400));
+    }
+
+    const user = new User({
+        fullName,
+        email,
+        phoneNumber,
+        gender,
+        password,
+        passwordConfirm
+    });
+
+    const result = await user.save();
+    res.status(201).json({
+        message: "User created successfully",
+        result
+    });
+}
+
+exports.login = async (req, res, next) => {
+    const { email, password } = req.body;
+
+    // check if user exists
+    if (!email || !password) {
+        return next(new Error("Please provide email and password", 400));
+    }
+
+    // find user in the database and include password.
+    const user = await User.findOne({email}).select('+password');
+
+    // validate user and password
+    if (!user || !(await user.correctPassword(password, user.password))) {
+        return next(new Error("Incorrect Email or password", 401));        
+    } 
+    // if user is valid generate jwt token
+   const token = generateToken(user, process.env.JWT_SECRET, process.env.JWT_EXPIRES_IN);
+
+    await user.save({validateBeforeSave: false });
+
+    res.status(200).json({
+        token
+    });
+}

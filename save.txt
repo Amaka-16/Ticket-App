@@ -1,0 +1,80 @@
+User 
+id: 682efc806ae22de41845eecf
+{
+  "fullName": "Larry Jock",
+  "email": "larryjock16@gmail.com",
+  "phoneNumber": "08156344496",
+  "gender": "male",
+  "password": "larry1234",
+  "passwordConfirm": "larry1234"
+}
+
+{
+  "fullName": "Jerry King",
+  "email": "JoerryKing@yahoo.com",
+  "phoneNumber": "08056388896",
+  "gender": "male",
+  "password": "joeeery@@99",
+  "passwordConfirm": "joeeery@@99"
+}
+
+{
+  "fullName": "Stephanie Krager",
+  "email": "yourgalstephy77@yahoo.com",
+  "phoneNumber": "08098238056",
+  "gender": "female",
+  "password": "galliest@ph",
+  "passwordConfirm": "galliest@ph"
+}
+
+
+
+User Login
+{
+  "email": "larryjock16@gmail.com",
+  "password": "larry1234"
+}
+
+{
+  "email": "JoerryKing@yahoo.com",
+  "password": "joeeery@@99"
+}
+
+{
+  "email": "yourgalstephy77@yahoo.com",
+  "password": "galliest@ph"
+}
+
+
+Ticket id_683436bac71bcdb24c93fb3a
+{
+  "eventTitle": "Wedding",
+  "eventDate": "29/07/2025",
+  "venue": "Abuja",
+  "seatNumber": "003",
+  "ticketPrice": "100",
+  "purchaseNumber": "0070",
+  "Status": "booked"
+}
+
+Ticket id_6834412f8f69bf312ba06fa4
+{
+  "eventTitle": "surgery",
+  "eventDate": "07/08/2025",
+  "venue": "Kano",
+  "seatNumber": "089",
+  "ticketPrice": "80",
+  "purchaseNumber": "0670",
+  "Status": "booked"
+}
+
+Ticket id_683441f78f69bf312ba06faa
+{
+  "eventTitle": "examination",
+  "eventDate": "25/11/2024",
+  "venue": "Enugu",
+  "seatNumber": "768",
+  "ticketPrice": "90",
+  "purchaseNumber": "0078",
+  "Status": "booked"
+}
