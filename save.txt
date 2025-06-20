@@ -27,6 +27,15 @@ id: 682efc806ae22de41845eecf
   "passwordConfirm": "galliest@ph"
 }
 
+{
+  "fullName": "Gianna George",
+  "email": "gianna234@yahoo.com",
+  "phoneNumber": "09178654382",
+  "gender": "female",
+  "password": "ASDFG1234",
+  "passwordConfirm": "ASDFG1234"
+}
+
 
 
 User Login
@@ -77,4 +86,19 @@ Ticket id_683441f78f69bf312ba06faa
   "ticketPrice": "90",
   "purchaseNumber": "0078",
   "Status": "booked"
+}
+
+
+TRAIN
+{
+            "name": "Farida",
+            "destination": "Jos",
+            "eventDate": "29092024",
+            "trainNumber": 17,
+            "seatNumber": 234,
+            "eventTime": "0500",
+            "ticketType": "One-way",
+            "returnDate": "0800",
+            "status": "Available" 
+
 }

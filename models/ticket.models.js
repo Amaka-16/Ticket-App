@@ -3,12 +3,16 @@ const validator = require('validator');
 
 
 const ticketSchema = new mongoose.Schema({
+    ticketType: {
+        type: String,
+        enum: ["Airplane", "Train"]
+    },
     eventTitle: {
         type: String,
         required: [true, 'Please input the event']
     },
     eventDate: {
-        date: Number
+        type: Number
     },
     venue: {
         type: String,
@@ -25,7 +29,7 @@ const ticketSchema = new mongoose.Schema({
     },
     Status: {
         type: String,
-        enum: ["booked", "cancelled"] //change enum to available, non available or filled
+        enum: ["Available", "Not-available", "Filled"] //change enum to available, non available or filled
     }
 }, {timestamps: true});
 

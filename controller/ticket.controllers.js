@@ -49,7 +49,7 @@ exports.getAllTickets = async (req, res, next) => {
             ticket
         });
     }  catch (error) {
-        res.status(500).json({ error: error.mesage });
+        res.status(500).json({ error: error.message });
     }
 }
 
